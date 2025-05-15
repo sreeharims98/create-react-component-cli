@@ -1,6 +1,6 @@
 {
   "name": "sreehari-create-react-component-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CLI tool to create React component folders with TSX and SCSS module files",
   "main": "index.js",
   "bin": {
