@@ -1,0 +1,23 @@
+{
+  "name": "sreehari-create-react-component-cli",
+  "version": "1.0.0",
+  "description": "A CLI tool to create React component folders with TSX and SCSS module files",
+  "main": "index.js",
+  "bin": {
+    "create-component": "create-component.js"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "generator",
+    "tsx",
+    "scss",
+    "modules"
+  ],
+  "author": "Sreehari MS",
+  "license": "MIT",
+  "dependencies": {},
+  "engines": {
+    "node": ">=10.0.0"
+  }
+}

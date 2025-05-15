@@ -1,0 +1,44 @@
+cat > ~/bin/create-component << 'EOF'
+#!/bin/bash
+
+# Check if component name is provided
+if [ -z "$1" ]; then
+  echo "Usage: create-component <component-name>"
+  exit 1
+fi
+
+# Store component name
+COMPONENT_NAME=$1
+
+# Create directory
+mkdir -p $COMPONENT_NAME
+
+# Create TSX file with basic React component structure
+cat > $COMPONENT_NAME/$COMPONENT_NAME.tsx << EOT
+import React from 'react';
+import styles from './$COMPONENT_NAME.module.scss';
+
+interface ${COMPONENT_NAME}Props {
+  // Define your props here
+}
+
+export const $COMPONENT_NAME: React.FC<${COMPONENT_NAME}Props> = (props) => {
+  return (
+    <div className={styles.$COMPONENT_NAME}>
+      <h1>$COMPONENT_NAME Component</h1>
+    </div>
+  );
+};
+
+export default $COMPONENT_NAME;
+EOT
+
+# Create SCSS module file
+cat > $COMPONENT_NAME/$COMPONENT_NAME.module.scss << EOT
+.$COMPONENT_NAME {
+  // Your styles here
+}
+EOT
+
+echo "Component $COMPONENT_NAME created successfully!"
+EOF
