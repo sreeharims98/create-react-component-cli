@@ -10,13 +10,13 @@ A simple CLI tool to quickly scaffold React components with best practices.
 ## Installation
 
 ```bash
-npm install -g create-react-component-cli
+npm install -g sreehari-create-react-component-cli
 ```
 
 ## Usage
 
 ```bash
-create-react-component MyComponent
+create-component MyComponent
 ```
 
 ## License
